@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="screen" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller.HistoriaController">
+   <children>
+      <ImageView fx:id="traveler" fitHeight="348.0" fitWidth="648.0" layoutX="526.0" layoutY="77.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/Traveler.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sphere" fitHeight="348.0" fitWidth="648.0" layoutX="526.0" layoutY="77.0" opacity="0.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/Sphere.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="battle" fitHeight="348.0" fitWidth="648.0" layoutX="526.0" layoutY="77.0" opacity="0.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/Battle.gif" />
+         </image>
+      </ImageView>
+      <HBox fx:id="components" layoutX="526.0" layoutY="142.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="trap" fitHeight="216.0" fitWidth="216.0" opacity="0.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/Stone.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="ally" fitHeight="219.0" fitWidth="275.0" opacity="0.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/angelcat.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="enemy" fitHeight="198.0" fitWidth="230.0" opacity="0.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/devilcat.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <ImageView fx:id="partners" fitHeight="348.0" fitWidth="648.0" layoutX="526.0" layoutY="77.0" opacity="0.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/Partners.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="story" alignment="TOP_LEFT" layoutX="526.0" layoutY="500.0" prefHeight="210.0" prefWidth="648.0" styleClass="story" stylesheets="@../CSS/CSSInicio.css" wrapText="true" />
+      <ToggleButton fx:id="skipButton" layoutX="1203.0" layoutY="715.0" mnemonicParsing="false" onMouseClicked="#skip" opacity="0.5" prefHeight="20.0" prefWidth="149.0" style="-fx-border-color: none; -fx-text-fill: white; -fx-font-family: &quot;Fixedsys 2 Monospaced&quot;;" styleClass="options" stylesheets="@../CSS/CSSAtaque.css" text="&gt;&gt; SALTAR">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ToggleButton>
+      <Label fx:id="videoGameName" layoutX="405.0" layoutY="299.0" opacity="0.0" prefHeight="76.0" prefWidth="894.0" styleClass="videoGameName" stylesheets="@../CSS/CSSInicio.css" text="EL LABERINTO DE ZORVAN" />
+      <Label fx:id="instruction" layoutX="672.0" layoutY="547.0" opacity="0.0" styleClass="pressKey" stylesheets="@../CSS/CSSInicio.css" text="[PRESIONE 2 O ENTER]" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,82 @@
+@font-face {
+    src: url("undertale-in-game-hud-font.ttf");
+}
+
+@font-face {
+    src: url("mercy.ttf");
+}
+
+@font-face {
+    src: url("fixedsys-2-monospaced.ttf");
+}
+
+.progress-bar .bar {
+    -fx-background-color: -fx-box-border, #D4D400;
+    -fx-background-insets: 0;
+    -fx-padding: 0.8em;
+}
+
+.progress-bar > .track {
+    -fx-background-color: -fx-box-border, #AE0001;
+    -fx-background-insets: 0;
+    -fx-padding: 0.8em;
+}
+
+.healthPoints {
+    -fx-font-family: "Undertale In-Game HUD Font";
+    -fx-font-size: 14px;
+}
+
+.options {
+    -fx-background-color: transparent;
+    -fx-border-color: #E38A4E;
+    -fx-font-family: "MERCY";
+    -fx-font-size: 22px;
+    -fx-padding: 0;
+    -fx-text-fill: #E38A4E;
+}
+
+.attackOption {
+    -fx-background-image: url("../img/AttackOption.JPG");
+    -fx-background-position: 7px;
+    -fx-background-repeat: no-repeat;
+}
+
+.activateOption {
+    -fx-background-image: url("../img/ActivateOption.JPG");
+    -fx-background-position: 4px;
+    -fx-background-repeat: no-repeat;
+}
+
+.throwOption {
+    -fx-background-image: url("../img/ThrowOption.png");
+    -fx-background-position: 14px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 15px;
+}
+
+.menu {
+    -fx-border-color: white;
+    -fx-border-width: 4px;
+    visibility: hidden;
+}
+
+.menuOptions {
+    -fx-background-color: transparent;
+    -fx-font-family: "Fixedsys 2 Monospaced";
+    -fx-font-size: 16px;
+    -fx-padding: 0;
+    -fx-text-fill: white;
+}
+
+.points {
+    -fx-background-color: transparent;
+    -fx-font-family: "Undertale In-Game HUD Font";
+    -fx-font-size: 11px;
+    -fx-padding: 0;
+    -fx-text-fill: white;
+}
+
+.tooltip {
+    -fx-font-size: 12px;
+}

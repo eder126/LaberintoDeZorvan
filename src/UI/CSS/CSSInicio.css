@@ -1,0 +1,151 @@
+@font-face {
+    src: url("mercy.ttf");
+}
+
+@font-face {
+    src: url("fixedsys-2-monospaced.ttf");
+}
+
+@font-face {
+    src: url("monster-friend-fake.ttf");
+}
+
+@font-face {
+    src: url("undertale-in-game-hud-font.ttf");
+}
+
+.story {
+    -fx-font-family: "Fixedsys 2 Monospaced";
+    -fx-font-size: 29px;
+    -fx-text-fill: white;
+}
+
+.videoGameName {
+    -fx-font-family: "Monster Friend (Fake Undertale Logo Font)";
+    -fx-font-size: 40px;
+    -fx-text-fill: white;
+}
+
+.pressKey {
+    -fx-font-family: "Undertale In-Game HUD Font";
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+
+.instruction, .input {
+    -fx-background-color: transparent;
+    -fx-font-family: "Fixedsys 2 Monospaced";
+    -fx-font-size: 35px;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+}
+
+.iniciarSalir {
+    -fx-font-family: "Fixedsys 2 Monospaced";
+}
+
+.iniciarSalir:hover {
+    -fx-opacity: 0.5;
+}
+
+.options {
+    -fx-background-color: transparent;
+    -fx-border-color: #E38A4E;
+    -fx-font-family: "MERCY";
+    -fx-font-size: 22px;
+    -fx-padding: 0;
+    -fx-text-fill: #E38A4E;
+}
+
+.check-box > .box {
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-pref-height: 40;
+    -fx-pref-width: 40;
+}
+
+.check-box > .box > .mark {
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100%;
+    -fx-shape: none;
+}
+
+.fuego:selected > .box > .mark {
+    -fx-background-image: url("../img/elem/fire.png");
+    -fx-min-width: 80px;
+}
+
+.agua:selected > .box > .mark {
+    -fx-background-image: url("../img/elem/water.png");
+    -fx-min-width: 80px;
+}
+
+.planta:selected > .box > .mark {
+    -fx-background-image: url("../img/elem/plant.png");
+    -fx-min-width: 80px;
+}
+
+.roca:selected > .box > .mark {
+    -fx-background-image: url("../img/elem/rock.png");
+    -fx-min-width: 80px;
+}
+
+.electrico:selected > .box > .mark {
+    -fx-background-image: url("../img/elem/electric.png");
+    -fx-min-width: 80px;
+}
+
+.hielo:selected > .box > .mark {
+    -fx-background-image: url("../img/elem/ice.png");
+    -fx-min-width: 80px;
+}
+
+.pc:selected > .box > .mark {
+    -fx-background-color: transparent;
+}
+
+.fuego > .box > .mark {
+    -fx-background-image: url("../img/elem/fireB&W.png");
+    -fx-background-color: transparent;
+    -fx-min-width: 80px;
+}
+
+.agua > .box > .mark {
+    -fx-background-image: url("../img/elem/waterB&W.png");
+    -fx-background-color: transparent;
+    -fx-min-width: 80px;
+}
+
+.planta > .box > .mark {
+    -fx-background-image: url("../img/elem/plantB&W.png");
+    -fx-background-color: transparent;
+    -fx-min-width: 80px;
+}
+
+.roca > .box > .mark {
+    -fx-background-image: url("../img/elem/rockB&W.png");
+    -fx-background-color: transparent;
+    -fx-min-width: 80px;
+}
+
+.electrico > .box > .mark {
+    -fx-background-image: url("../img/elem/electricB&W.png");
+    -fx-background-color: transparent;
+    -fx-min-width: 80px;
+}
+
+.hielo > .box > .mark {
+    -fx-background-image: url("../img/elem/iceB&W.png");
+    -fx-background-color: transparent;
+    -fx-min-width: 80px;
+}
+
+.pc {
+    -fx-background-color: transparent;
+    -fx-font-family: "Fixedsys 2 Monospaced";
+    -fx-font-size: 18px;
+    -fx-text-alignment: center;
+    -fx-padding: 0px;
+}

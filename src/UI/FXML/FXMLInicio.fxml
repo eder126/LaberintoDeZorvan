@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: black; -fx-border-width: 3; -fx-border-style: solid;" stylesheets="@../CSS/CSSInicio.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller.InicioController">
+    <children>
+      <Pane fx:id="panelJuego" layoutX="4.0" layoutY="5.0" prefHeight="827.0" prefWidth="440.0" stylesheets="@../CSS/CSSInicio.css">
+         <children>
+            <ToggleButton layoutX="150.0" layoutY="281.0" mnemonicParsing="false" onMouseClicked="#IniciarJuego" prefHeight="61.0" prefWidth="133.0" style="-fx-border-color: none; -fx-text-fill: white; -fx-font-size: 35px; -fx-font-family: &quot;Fixedsys 2 Monospaced&quot;;" stylesheets="@../CSS/CSSInicio.css" text="Listo">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="iniciarSalir" />
+                  <String fx:value="options" />
+               </styleClass>
+            </ToggleButton>
+            <Text fill="WHITE" layoutX="102.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="instruction" text="Jugadores" textAlignment="CENTER">
+               <font>
+                  <Font name="MERCY Regular" size="26.0" />
+               </font>
+            </Text>
+            <Slider fx:id="jugadoresSlider" blockIncrement="1.0" cache="true" layoutX="150.0" layoutY="159.0" majorTickUnit="1.0" max="4.0" min="2.0" minorTickCount="0" onMouseClicked="#jugadoresCantidad" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="2.0">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></Slider>
+            <Pane fx:id="jugador4" layoutX="367.0" layoutY="303.0" prefHeight="139.0" prefWidth="325.0" visible="false">
+               <children>
+                  <Text fill="E38A4E" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOMBRE" textAlignment="CENTER">
+                     <font>
+                        <Font name="MERCY Regular" size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="nombre4" layoutX="150.0" layoutY="15.0" prefHeight="25.0" prefWidth="126.0" />
+                  <Text fill="E38A4E" layoutX="17.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HÉROES (3)" textAlignment="CENTER" wrappingWidth="88.11459350585938">
+                     <font>
+                        <Font name="MERCY Regular" size="15.0" />
+                     </font>
+                  </Text>
+                  <VBox layoutX="129.0" layoutY="53.0" prefHeight="73.0" prefWidth="126.0">
+                     <children>
+                        <HBox prefHeight="90.0" prefWidth="227.0" spacing="20.0">
+                           <children>
+                              <CheckBox fx:id="fuego4" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="fuego" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                                 <tooltip>
+                                    <Tooltip text="Fuego" />
+                                 </tooltip></CheckBox>
+                              <CheckBox fx:id="agua4" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="agua" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                                 <tooltip>
+                                    <Tooltip text="Agua" />
+                                 </tooltip></CheckBox>
+                              <CheckBox fx:id="planta4" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="planta" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                                 <tooltip>
+                                    <Tooltip text="Planta" />
+                                 </tooltip></CheckBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="90.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <CheckBox fx:id="roca4" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="roca" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                                 <tooltip>
+                                    <Tooltip text="Roca" />
+                                 </tooltip></CheckBox>
+                              <CheckBox fx:id="electrico4" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="electrico" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                                 <tooltip>
+                                    <Tooltip text="Eléctrico" />
+                                 </tooltip></CheckBox>
+                              <CheckBox fx:id="hielo4" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="hielo" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                                 <tooltip>
+                                    <Tooltip text="Hielo" />
+                                 </tooltip></CheckBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <CheckBox fx:id="pc4" layoutX="293.0" layoutY="61.0" mnemonicParsing="false" />
+                  <Text fill="E38A4E" layoutX="294.0" layoutY="74.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="PC" textAlignment="CENTER">
+                     <font>
+                        <Font name="MERCY Regular" size="10.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <ToggleButton layoutX="150.0" layoutY="342.0" mnemonicParsing="false" onMouseClicked="#salir" prefHeight="61.0" prefWidth="133.0" style="-fx-border-color: none; -fx-text-fill: white; -fx-font-size: 35px; -fx-font-family: &quot;Fixedsys 2 Monospaced&quot;;" stylesheets="@../CSS/CSSInicio.css" text="Salir">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="options" />
+                  <String fx:value="iniciarSalir" />
+               </styleClass>
+            </ToggleButton>
+            <HBox fx:id="error" layoutX="38.0" layoutY="442.0" prefHeight="100.0" prefWidth="357.0" styleClass="menu" stylesheets="@../CSS/CSSAtaque.css">
+               <children>
+                  <VBox prefHeight="84.0" prefWidth="29.0">
+                     <children>
+                        <Button fx:id="asterisk" mnemonicParsing="false" prefHeight="28.0" prefWidth="30.0" styleClass="menuOptions" stylesheets="@../CSS/CSSAtaque.css" text="*">
+                           <font>
+                              <Font name="Consolas" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="SOMETIMES">
+                     <children>
+                        <Label fx:id="indication" alignment="TOP_LEFT" styleClass="menuOptions" stylesheets="@../CSS/CSSAtaque.css" wrapText="true" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Label layoutX="452.0" layoutY="14.0" prefHeight="70.0" prefWidth="660.0" styleClass="instruction" stylesheets="@../CSS/CSSInicio.css" text="Nombre al primer jugador." />
+      <TextField fx:id="nombre1" alignment="CENTER" layoutX="604.0" layoutY="84.0" prefHeight="70.0" promptText="..." styleClass="input" stylesheets="@../CSS/CSSInicio.css" />
+      <HBox layoutX="471.0" layoutY="158.0" prefHeight="100.0" prefWidth="654.0">
+         <children>
+            <CheckBox fx:id="fuego1" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="fuego" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+               <tooltip>
+                  <Tooltip text="Fuego" />
+               </tooltip>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckBox>
+            <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+            <CheckBox fx:id="agua1" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="agua" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+               <tooltip>
+                  <Tooltip text="Agua" />
+               </tooltip>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckBox>
+            <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+            <CheckBox fx:id="planta1" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="planta" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+               <tooltip>
+                  <Tooltip text="Planta" />
+               </tooltip>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckBox>
+            <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+            <CheckBox fx:id="roca1" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="roca" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+               <tooltip>
+                  <Tooltip text="Roca" />
+               </tooltip>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckBox>
+            <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+            <CheckBox fx:id="electrico1" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="electrico" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+               <tooltip>
+                  <Tooltip text="Eléctrico" />
+               </tooltip>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckBox>
+            <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+            <CheckBox fx:id="hielo1" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="hielo" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+               <tooltip>
+                  <Tooltip text="Hielo" />
+               </tooltip>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckBox>
+         </children>
+      </HBox>
+      <Pane fx:id="jugador2" layoutX="452.0" layoutY="208.0" prefHeight="214.0" prefWidth="807.0">
+         <children>
+            <Label layoutX="-9.0" prefHeight="70.0" prefWidth="683.0" styleClass="instruction" stylesheets="@../CSS/CSSInicio.css" text="Nombre al segundo jugador." />
+            <TextField fx:id="nombre2" alignment="CENTER" layoutX="152.0" layoutY="70.0" prefHeight="70.0" promptText="..." styleClass="input" stylesheets="@../CSS/CSSInicio.css" />
+            <HBox layoutX="19.0" layoutY="144.0" prefHeight="100.0" prefWidth="654.0">
+               <children>
+                  <CheckBox fx:id="fuego2" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="fuego" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Fuego" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+                  <CheckBox fx:id="agua2" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="agua" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Agua" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+                  <CheckBox fx:id="planta2" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="planta" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Planta" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+                  <CheckBox fx:id="roca2" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="roca" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Roca" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+                  <CheckBox fx:id="electrico2" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="electrico" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Eléctrico" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+                  <CheckBox fx:id="hielo2" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="hielo" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Hielo" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="700.0" layoutY="63.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" style="-fx-font-size: 18px;" styleClass="instruction" stylesheets="@../CSS/CSSInicio.css" text="PC">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Button fx:id="yesPC2" alignment="CENTER" contentDisplay="CENTER" layoutX="673.0" layoutY="118.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" styleClass="pc" stylesheets="@../CSS/CSSInicio.css" text="SÍ" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Button fx:id="noPC2" alignment="CENTER" contentDisplay="CENTER" layoutX="727.0" layoutY="118.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" styleClass="pc" stylesheets="@../CSS/CSSInicio.css" text="NO" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <CheckBox fx:id="pc2" layoutX="686.0" layoutY="114.0" mnemonicParsing="false" onMouseClicked="#changePC2Color" prefHeight="25.0" prefWidth="23.0" styleClass="pc" stylesheets="@../CSS/CSSInicio.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckBox>
+            <CheckBox fx:id="no2" layoutX="738.0" layoutY="114.0" mnemonicParsing="false" onMouseClicked="#changePC2Color" prefHeight="25.0" prefWidth="23.0" styleClass="pc" stylesheets="@../CSS/CSSInicio.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckBox>
+            <Label layoutX="253.0" layoutY="5.0" style="-fx-text-fill: red;" styleClass="instruction" stylesheets="@../CSS/CSSInicio.css" text="segundo" />
+         </children>
+      </Pane>
+      <Pane fx:id="jugador3" layoutX="452.0" layoutY="411.0" prefHeight="214.0" prefWidth="807.0" visible="false">
+         <children>
+            <Label prefHeight="70.0" prefWidth="672.0" styleClass="instruction" stylesheets="@../CSS/CSSInicio.css" text="Nombre al tercer jugador." />
+            <TextField fx:id="nombre3" alignment="CENTER" layoutX="152.0" layoutY="70.0" prefHeight="70.0" promptText="..." styleClass="input" stylesheets="@../CSS/CSSInicio.css" />
+            <HBox layoutX="19.0" layoutY="144.0" prefHeight="100.0" prefWidth="654.0">
+               <children>
+                  <CheckBox fx:id="fuego3" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="fuego" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Fuego" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+                  <CheckBox fx:id="agua3" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="agua" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Agua" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+                  <CheckBox fx:id="planta3" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="planta" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Planta" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+                  <CheckBox fx:id="roca3" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="roca" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Roca" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+                  <CheckBox fx:id="electrico3" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="electrico" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Eléctrico" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+                  <CheckBox fx:id="hielo3" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="hielo" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Hielo" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="700.0" layoutY="63.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" style="-fx-font-size: 18px;" styleClass="instruction" stylesheets="@../CSS/CSSInicio.css" text="PC">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Button fx:id="yesPC3" alignment="CENTER" contentDisplay="CENTER" layoutX="673.0" layoutY="118.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" styleClass="pc" stylesheets="@../CSS/CSSInicio.css" text="SÍ" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Button fx:id="noPC3" alignment="CENTER" contentDisplay="CENTER" layoutX="727.0" layoutY="118.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" styleClass="pc" stylesheets="@../CSS/CSSInicio.css" text="NO" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <CheckBox fx:id="pc3" layoutX="689.0" layoutY="113.0" mnemonicParsing="false" onMouseClicked="#changePC3Color" prefHeight="25.0" prefWidth="23.0" styleClass="pc" stylesheets="@../CSS/CSSInicio.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckBox>
+            <CheckBox fx:id="no3" layoutX="738.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#changePC3Color" prefHeight="25.0" prefWidth="23.0" styleClass="pc" stylesheets="@../CSS/CSSInicio.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckBox>
+            <Label layoutX="261.0" layoutY="5.0" style="-fx-text-fill: green;" styleClass="instruction" stylesheets="@../CSS/CSSInicio.css" text="tercer" />
+         </children>
+      </Pane>
+      <Pane fx:id="jugador4" layoutX="452.0" layoutY="625.0" prefHeight="214.0" prefWidth="807.0" visible="false">
+         <children>
+            <Label prefHeight="70.0" prefWidth="672.0" styleClass="instruction" stylesheets="@../CSS/CSSInicio.css" text="Nombre al cuarto jugador." />
+            <TextField fx:id="nombre4" alignment="CENTER" layoutX="152.0" layoutY="70.0" prefHeight="70.0" promptText="..." styleClass="input" stylesheets="@../CSS/CSSInicio.css" />
+            <HBox layoutX="19.0" layoutY="144.0" prefHeight="100.0" prefWidth="654.0">
+               <children>
+                  <CheckBox fx:id="fuego4" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="fuego" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Fuego" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+                  <CheckBox fx:id="agua4" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="agua" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Agua" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+                  <CheckBox fx:id="planta4" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="planta" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Planta" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+                  <CheckBox fx:id="roca4" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="roca" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Roca" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+                  <CheckBox fx:id="electrico4" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="electrico" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Eléctrico" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Separator prefHeight="52.0" prefWidth="74.0" style="visibility: false;" />
+                  <CheckBox fx:id="hielo4" mnemonicParsing="false" onMouseClicked="#poderCasilla" prefHeight="59.0" prefWidth="55.0" styleClass="hielo" stylesheets="@../CSS/CSSInicio.css" textAlignment="CENTER" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Hielo" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="700.0" layoutY="63.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" style="-fx-font-size: 18px;" styleClass="instruction" stylesheets="@../CSS/CSSInicio.css" text="PC">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Button fx:id="yesPC4" alignment="CENTER" contentDisplay="CENTER" layoutX="673.0" layoutY="118.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" styleClass="pc" stylesheets="@../CSS/CSSInicio.css" text="SÍ" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Button fx:id="noPC4" alignment="CENTER" contentDisplay="CENTER" layoutX="727.0" layoutY="118.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" styleClass="pc" stylesheets="@../CSS/CSSInicio.css" text="NO" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <CheckBox fx:id="pc4" layoutX="689.0" layoutY="113.0" mnemonicParsing="false" onMouseClicked="#changePC4Color" prefHeight="25.0" prefWidth="23.0" styleClass="pc" stylesheets="@../CSS/CSSInicio.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckBox>
+            <CheckBox fx:id="no4" layoutX="738.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#changePC4Color" prefHeight="25.0" prefWidth="23.0" styleClass="pc" stylesheets="@../CSS/CSSInicio.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckBox>
+            <Label layoutX="261.0" layoutY="5.0" style="-fx-text-fill: yellow;" styleClass="instruction" stylesheets="@../CSS/CSSInicio.css" text="cuarto" />
+         </children>
+      </Pane>
+      <Label layoutX="714.0" layoutY="19.0" style="-fx-text-fill: blue;" styleClass="instruction" stylesheets="@../CSS/CSSInicio.css" text="primer" />
+    </children>
+</AnchorPane>

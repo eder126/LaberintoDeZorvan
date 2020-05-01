@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="250.0" prefWidth="400.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 2px;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller.GanoController">
+   <children>
+      <Pane layoutX="3.0" layoutY="14.0" prefHeight="250.0" prefWidth="393.0" style="-fx-background-color: black;">
+         <children>
+            <ImageView fitHeight="266.0" fitWidth="403.0" layoutX="-3.0" layoutY="-16.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/Confetti.gif" />
+               </image>
+            </ImageView>
+            <Pane layoutX="13.0" layoutY="127.0" prefHeight="110.0" prefWidth="374.0">
+               <children>
+                  <ToggleButton layoutX="14.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#inicio" prefHeight="35.0" prefWidth="100.0" styleClass="options" stylesheets="@../CSS/CSSInicio.css" text="Inicio">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ToggleButton>
+                  <ToggleButton layoutX="260.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#reiniciar" prefHeight="35.0" prefWidth="100.0" styleClass="options" stylesheets="@../CSS/CSSInicio.css" text="Jugar">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ToggleButton>
+               </children>
+            </Pane>
+            <Pane layoutX="13.0" layoutY="14.0" prefHeight="110.0" prefWidth="374.0" stylesheets="@../CSS/CSSInicio.css">
+               <children>
+                  <Text fx:id="ganadorJuego" fill="WHITE" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Fixedsys 2 Monospaced&quot;; -fx-font-size: 20px;" text="¡Felicidades, abcd! Logró escapar." textAlignment="CENTER" wrappingWidth="373.999999165535" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
